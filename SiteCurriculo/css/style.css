@@ -1,12 +1,32 @@
 body {
-    background-color: lightblue;
-    background-image: url("imagens/pokemon-style-tilesets.png");
+    background-image: url(../assets/image/background.jpg);
     background-repeat: repeat-y;
-    background-position: right top;
-    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
 }
 
-#home_bar{
+#menu_bar{
+    background-color: white;
+    padding: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+#content-box {
     background-color: lightblue;
+    padding: 20px; 
+    border-radius: 10px;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center; /* Centraliza o texto e imagens */
 }
 
+#profileIcon {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-top: 10px;
+}

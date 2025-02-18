@@ -6,103 +6,103 @@
         <title>Home</title>
         <meta charset="UTF-8">
 
-        <link href="style.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
     </head>
 
     <body>
 
         <!--* MENU - Link para outras paginas-->
         <div id="menu_bar">
-            <a id="home_bar" href="index.html"> Home </a> | 
-            <a id="projetos_bar" href="projetos.html"> Projetos </a>
+            <a href="index.html"> Home </a> | 
+            <a href="projetos.html"> Projetos </a> |
+            <a href="curriculo.html"> Curriculo </a> |
         </div>
 
-        <!--* heading + paragrafo-->
-        <h1> Quem sou eu.</h1>
-        <p>Meu nome é Victor Mello Ayres, sou estudante de Engenharia de Robôs no Centro Universitario FEI.</p>
+        <div id="content-box">   
+            <!--* Titulo + introdução-->
+            <img src="../assets/image/profileIcon.jpeg" alt="imagem de perfil" id="profileIcon">
+            <h1> Victor M. O. de Mello Ayres </h1>
+            <p>Meu nome é Victor Mello Ayres, sou estudante de Engenharia de Robôs no Centro Universitario FEI.</p>
 
-        <!--* Listar nao ordenada-->
-        <h2>Lista de Contatos</h2>
-        <ul>
-            <li>Email: victoroliveiraayres@gmail.com</li>
-            <li>Telefone: +55 11 98765-4321</li>
-            <li>GitHub: <a href="https://github.com/vmayres"> /vmayres </a> </li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/victor-mello-ayres-1570ab295/"> Victor Mello Ayres </a> </li>
-        </ul>
+            <!--* Listar nao ordenada-->
+            <h2>Lista de Contatos</h2>
+            <ul>
+                <li>Email: victoroliveiraayres@gmail.com</li>
+                <li>Telefone: +55 11 98765-4321</li>
+                <li>GitHub: <a href="https://github.com/vmayres"> /vmayres </a> </li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/victor-mello-ayres-1570ab295/"> Victor Mello Ayres </a> </li>
+            </ul>
 
-        <!--* Imagem-->
-        <h2> Minhas Formação </h2>
-        <P>Proficiente em Inglês - C2 </P>
-        <p>Proficiente em Alemão - B2 </p>
-        <p>Engenharia de Robôs - 2025 </p>
+            <!--* Imagem-->
+            <h2> Minhas Formação </h2>
+            <P>Proficiente em Inglês - C2 </P>
+            <p>Proficiente em Alemão - B2 </p>
+            <p>Engenharia de Robôs - 2025 </p>
 
-        <table border="2">
+            <div style="text-align: center;">
+                <table border="2" style="margin: 0 auto;">
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Línguas de Programação</th>
+                    </tr>
+                    <tr>
+                        <td>Proficiente</td>
+                        <td>
+                            <img src="../assets/image/C.png" alt="imagem de C" width="50" height="50">
+                            <img src="../assets/image/C++.png" alt="imagem de C++" width="50" height="50">
+                            <img src="../assets/image/Csharp.png" alt="imagem de C#" width="50" height="50">
+                            <img src="../assets/image/python.png" alt="imagem de python" width="50" height="50">
+                            <img src="../assets/image/java.png" alt="imagem de java" width="50" height="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Intermediário</td>
+                        <td>
+                            <img src="../assets/image/vhdl.png" alt="imagem de VHLD" width="50" height="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Próximos Aprendizados</td>
+                        <td>
+                            <img src="../assets/image/html.png" alt="imagem de HTML" width="50" height="50">
+                            <img src="../assets/image/CSS.png" alt="imagem de CSS" width="50" height="50">
+                            <img src="../assets/image/JS.png" alt="imagem de JS" width="50" height="50">
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
-            <tr>
-                <th>Categoria</th>
-                <th>Línguas de Programação</th>
-            </tr>
+            <!--* Link para uma pagina Externa-->
+            <h2>Trabalhos Publicados</h2>
+            <a href="https://www.researchgate.net/publication/382518897_Robot_Development_for_RoboCupWork_Competition_-_RoboFEIWork_Team"> Robot Development for RoboCup@Work Competition - RoboFEI@Work Team </a>
 
-            <tr>
-                <td>Proficiente</td>
-                <td>
-                    <img src="imagens/C.png" alt="imagem de C" width="50" height="50">
-                    <img src="imagens/C++.png" alt="imagem de C++" width="50" height="50">
-                    <img src="imagens/Csharp.png" alt="imagem de C#" width="50" height="50">
-                    <img src="imagens/python.png" alt="imagem de python" width="50" height="50">
-                    <img src="imagens/java.png" alt="imagem de java" width="50" height="50">
-                </td>
-            </tr>
+            <h2>Trabalhos Futuros</h2>
+            <p> Conheça um pouco sobre o <a href="Projetos/ProjetoLIBRAS.html"> Projeto LIBRAS </a>, desenvolvido e idealizado durante as aulas de Visão Computacional </p>
 
-            <tr>
-                <td>Intermediário</td>
-                <td>
-                    <img src="imagens/vhdl.png" alt="imagem de VHLD" width="50" height="50">
-                </td>
-            </tr>
+            <!--* Vidio do Youtube e MAPA da instituiçao -->
+            <h2>Conheça um pouco sobre a instituição</h2>
 
-            <tr>
-                <td>Próximos Aprendizados</td>
-                <td>
-                    <img src="imagens/html.png" alt="imagem de HTML" width="50" height="50">
-                    <img src="imagens/CSS.png" alt="imagem de CSS" width="50" height="50">
-                    <img src="imagens/JS.png" alt="imagem de JS" width="50" height="50">
-                </td>
-            </tr>
+            <iframe 
+                width="560" height="315" 
+                src="https://www.youtube.com/embed/tYARU4_ikmY?si=Aigxywmy3DWRbHxr" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+            <br>
 
-        </table>
-
-        <!--* Link para uma pagina Externa-->
-        <h2>Trabalhos Publicados</h2>
-        <a href="https://www.researchgate.net/publication/382518897_Robot_Development_for_RoboCupWork_Competition_-_RoboFEIWork_Team"> Robot Development for RoboCup@Work Competition - RoboFEI@Work Team </a>
-
-        <h2>Trabalhos Futuros</h2>
-        <p> Conheça um pouco sobre o <a href="Projetos/ProjetoLIBRAS.html"> Projeto LIBRAS </a>, desenvolvido e idealizado durante as aulas de Visão Computacional </p>
-
-        <!--* Vidio do Youtube e MAPA da instituiçao -->
-        <h2>Conheça um pouco sobre a instituição</h2>
-
-        <iframe 
-            width="560" height="315" 
-            src="https://www.youtube.com/embed/tYARU4_ikmY?si=Aigxywmy3DWRbHxr" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-        </iframe>
-        <br>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233764.1658691642!2d-46.7272006583351!3d-23.727220117113298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4158ef9c7c05%3A0x776b798985695f52!2sFEI%20-%20Campus%20S%C3%A3o%20Bernardo%20do%20Campo!5e0!3m2!1spt-BR!2sbr!4v1739231416018!5m2!1spt-BR!2sbr" 
-        width="250" height="200" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <br>
-
-
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233764.1658691642!2d-46.7272006583351!3d-23.727220117113298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4158ef9c7c05%3A0x776b798985695f52!2sFEI%20-%20Campus%20S%C3%A3o%20Bernardo%20do%20Campo!5e0!3m2!1spt-BR!2sbr!4v1739231416018!5m2!1spt-BR!2sbr" 
+            width="250" height="200" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <br>
+        </div>
+        
         <!--* Easter Egg-->
         <a href="easteregg.html"> :3 </a>
 
