@@ -1,32 +1,22 @@
-<!--
-
-Entrega: A entrega dessa atividade deve ser um link do github.
-
-Objetivo: Construir o esqueleto da página inicial do seu site.
-
-
-HTML: Reproduza uma página HTML (‘index.html’):        
-Título (tag <h1> com seu nome).                                         (valor 0.5)
-Texto (tags <p> com informações a sua escolha)                         (valor 0.5)
-Pelo menos 1 lista                                                          (valor 1.0)
-Pelo menos 5 imagens                                                  (valor 2.0)
-Pelo menos 3 links externos                                                  (valor 3.0)
-Pelo menos 3 iframes, sendo pelo menos 1 mapa                          (valor 3.0)
-
-Obs: Outras penalidades podem ser aplicadas.
-
--->
-
 <!--? Aluno: Victor M Ayres    RA: 11.121.224-7    Curso: Eng. Robôs ?-->
 
 <!DOCTYPE html>
     <head>
         <!--* Titulo Significativo-->
-        <title>Sobre Min</title>
+        <title>Home</title>
         <meta charset="UTF-8">
+
+        <link href="style.css" rel="stylesheet">
     </head>
 
     <body>
+
+        <!--* MENU - Link para outras paginas-->
+        <div id="menu_bar">
+            <a id="home_bar" href="index.html"> Home </a> | 
+            <a id="projetos_bar" href="projetos.html"> Projetos </a>
+        </div>
+
         <!--* heading + paragrafo-->
         <h1> Quem sou eu.</h1>
         <p>Meu nome é Victor Mello Ayres, sou estudante de Engenharia de Robôs no Centro Universitario FEI.</p>
@@ -82,37 +72,12 @@ Obs: Outras penalidades podem ser aplicadas.
 
         </table>
 
-        <!--* Link do YouTube-->
-        <h2>Primeiro Trabalho feito na Eng. de Robôs</h2>
-
-        <iframe
-            width="560" height="315" 
-            src="https://www.youtube.com/embed/uDyHBLG92Ac?si=8ODlApZUCP7XmPDR" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-        </iframe>
-
-        <h2>Ultimo Trabalho feito na Eng. de Robôs</h2>
-
-        <iframe 
-            width="560" height="315" 
-            src="https://www.youtube.com/embed/uvIPtvEySQ0?si=xhRphYnUySL8SrmA" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-        </iframe>
-
         <!--* Link para uma pagina Externa-->
         <h2>Trabalhos Publicados</h2>
         <a href="https://www.researchgate.net/publication/382518897_Robot_Development_for_RoboCupWork_Competition_-_RoboFEIWork_Team"> Robot Development for RoboCup@Work Competition - RoboFEI@Work Team </a>
 
         <h2>Trabalhos Futuros</h2>
-        <p> Conheça um pouco sobre o <a href="ProjetoLIBRAS.html"> Projeto LIBRAS </a>, desenvolvido e idelizado durante as aulas de Visao computacional </p>
+        <p> Conheça um pouco sobre o <a href="Projetos/ProjetoLIBRAS.html"> Projeto LIBRAS </a>, desenvolvido e idealizado durante as aulas de Visão Computacional </p>
 
         <!--* Vidio do Youtube e MAPA da instituiçao -->
         <h2>Conheça um pouco sobre a instituição</h2>

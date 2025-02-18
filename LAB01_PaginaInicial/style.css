@@ -1,0 +1,12 @@
+body {
+    background-color: lightblue;
+    background-image: url("imagens/pokemon-style-tilesets.png");
+    background-repeat: repeat-y;
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+#home_bar{
+    background-color: lightblue;
+}
+
