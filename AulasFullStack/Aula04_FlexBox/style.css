@@ -1,0 +1,72 @@
+.flex-container{
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; /** centraliza com a div  */
+    /* justify-content: space-around; */ /** centraliza com a div com espacamento automatico entre os elementos e a borda da div */
+    /* justify-content: space-between; */ /**  centraliza com a div com espacamento automatico entre os elementos  */
+}
+
+.flex-container div{
+    background-color: burlywood;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+
+.flex-container2{
+    height: 600px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-content: center; 
+    /* align-content: stretch; */ /** padrão */
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+
+}
+
+.flex-container2 div{
+    background-color: burlywood;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+
+.flex-itens{
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-itens div{
+    background-color: burlywood;
+    padding: 10px;
+    margin: 20px;
+}
+
+#item1{
+    order: 1; /* por padrao o valor de oder é 0, ele gornazia de order >> posicao no codigo */
+    flex-grow: 2;
+}
+
+#item2{
+    order: 2;
+    flex-grow: 1;
+}
+
+#item3{
+    order: 3;
+    flex-basis: 100px;
+}
