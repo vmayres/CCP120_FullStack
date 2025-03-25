@@ -1,0 +1,19 @@
+body{
+    background-color: aquamarine;
+}
+
+#res{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: green;
+    color: red;
+    font-size: 20px;
+    height: 100px;
+    width: 100px;
+
+    margin-top: 10px;
+
+}
