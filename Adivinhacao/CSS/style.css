@@ -21,7 +21,7 @@ div{
 #cointainer{
     width: 360px;
     height: 360px;
-    background-image: url('../assets/ball8.png');
+    background-image: url('../Assets/ball8.png');
     background-size: cover;
     background-position: center;
     margin: auto;
