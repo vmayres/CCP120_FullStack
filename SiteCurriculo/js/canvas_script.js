@@ -127,68 +127,47 @@ function Canvas_linhas(){
 }
 
 //desenho da casa
-function Canvas_casa(){
-    //chao
+function Canvas_casa() {
+    // Fundo do canvas
+    desenha_quadrado(0, 0, 400, 400, "aqua");
+
+    // Chão
     desenha_quadrado(0, 300, 400, 100, "gray");
 
-    //casinha
-    desenha_quadrado(150, 200, 100, 100, "#86471a");
-    //telhado
-    desenha_linha(150, 200, [[200, 150], [250, 200], [150, 200]], "#f5694d");
-    //porta
-    desenha_quadrado(190, 250, 20, 50, "#624423");
-    //janelas
-    desenha_quadrado(160, 220, 30, 30, "#47bdfd");
-    desenha_quadrado(210, 220, 30, 30, "#47bdfd");
+    // Casa
+    desenha_quadrado(150, 200, 100, 100, "saddlebrown");
+    desenha_linha(150, 200, [[200, 150], [250, 200], [150, 200]], "salmon", "salmon");
+    desenha_quadrado(190, 250, 20, 50, "#5C4033");
+    desenha_quadrado(160, 220, 30, 30, "lightblue");
+    desenha_quadrado(210, 220, 30, 30, "lightblue");
 
-    //arvores
-    desenha_quadrado(50, 250, 20, 50, "#86471a");
-    desenha_circulo(60, 235, 30, "#318a26");
+    // Árvores
+    desenha_quadrado(50, 250, 20, 50, "saddlebrown");
+    desenha_circulo(60, 235, 30, "green");
+    desenha_quadrado(350, 300, 20, 50, "saddlebrown");
+    desenha_circulo(360, 285, 30, "green");
 
-    desenha_quadrado(350, 300, 20, 50, "#86471a", "#86471a");
-    desenha_circulo(360, 285, 30, "#318a26", "#318a26");
+    // Cachoeira
+    desenha_circulo(0, 300, 50, "blue");
+    desenha_quadrado(0, 300, 50, 100, "blue");
+    desenha_quadrado(50, 350, 100, 50, "blue");
+    desenha_circulo(150, 400, 50, "blue");
 
-    //cachoeira
-    desenhar_arco(0, 300, [[1, 2]], 50, "#458efc");
-    desenha_quadrado(0, 300, 50, 100, "#458efc");
-    desenha_quadrado(50, 350, 100, 50, "#458efc");
-    desenhar_arco(150, 400, [[1, 2]], 50, "#458efc");
-
-    //sol
-    desenha_circulo(300, 100, 50, "#fcff2d");
+    // Sol
+    desenha_circulo(300, 100, 50, "yellow");
 }
 
-const slider = document.getElementById('slider');
-const canvas1 = document.getElementById('casa');
-const canvas2 = document.getElementById('linhas');
+// Obtém os elementos canvas do HTML
+const canvasLinha = document.getElementById("linhas");
+const canvasCasa = document.getElementById("casa");
 
+const ctxLinha = canvasLinha.getContext("2d");
+const ctxCasa = canvasCasa.getContext("2d");
 
-function changeSlider(){
-    if (slider.value == 0) {
-        canvas1.style.display = 'none'; // Oculta canvas "casa"
-        canvas2.style.display = 'block'; // Mostra canvas "linhas"
-        ctx = canvas2.getContext('2d');
-
-        //codigo do desenho
-        Canvas_linhas();
-    } 
-    
-    else {
-        canvas1.style.display = 'block'; // Mostra canvas "casa"
-        canvas2.style.display = 'none'; // Oculta canvas "linhas"
-        ctx = canvas1.getContext('2d');
-
-        //codigo do desenho
-        Canvas_casa();
-    }
-}
-
-slider.addEventListener('input', () => {
-    changeSlider();
-});
-
-// Inicialmente, mostre o canvas "casa"
-canvas1.style.display = 'none';
-canvas2.style.display = 'block';
-ctx = canvas2.getContext('2d');
+// Define o contexto global para o canvas de linhas e desenha
+ctx = ctxLinha;
 Canvas_linhas();
+
+// Define o contexto global para o canvas de casa e desenha
+ctx = ctxCasa;
+Canvas_casa();
