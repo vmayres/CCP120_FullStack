@@ -27,6 +27,19 @@ document.addEventListener('mousemove', function(evento) {
     let newX = evento.clientX - canvas.offsetLeft - ret_4.largura / 2;
     let newY = evento.clientY - canvas.offsetTop - ret_4.altura / 2;
 
-    ret_4.x = Math.max(0, Math.min(canvas.width - ret_4.largura, newX));
-    ret_4.y = Math.max(0, Math.min(canvas.height - ret_4.altura, newY));
+    if (newX < 0) {
+        ret_4.x = 0;
+    } else if (newX > canvas.width - ret_4.largura) {
+        ret_4.x = canvas.width - ret_4.largura;
+    } else {
+        ret_4.x = newX;
+    }
+
+    if (newY < 0) {
+        ret_4.y = 0;
+    } else if (newY > canvas.height - ret_4.altura) {
+        ret_4.y = canvas.height - ret_4.altura;
+    } else {
+        ret_4.y = newY;
+    }
 });
