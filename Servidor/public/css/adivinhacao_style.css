@@ -1,0 +1,39 @@
+body{
+    background-color: aquamarine;
+}
+
+div{
+    margin-top: 10px;
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.centralizado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cointainer{
+    width: 360px;
+    height: 360px;
+    background-image: url('../Assets/ball8.png');
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    flex-direction: column;
+}
+
+#numero{
+    width: 3.8ch;
+    font-size: 30pt;
+    text-align: center;
+}
