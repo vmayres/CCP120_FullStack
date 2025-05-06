@@ -25,6 +25,7 @@ body{
     justify-content: space-around;
 
     background-color: rgba(46, 45, 47, 0.7);
+    backdrop-filter: blur(35px);
     padding: 15px;
     text-align: left;
     width: 100%;
@@ -92,13 +93,20 @@ body{
     justify-content: center;
     align-items: center;
 
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
     z-index: 6;
 
-    border-radius: 10px;
+    border-radius: 25px;
 
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(208, 144, 216, 0.315);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-left: 1px solid rgba(255, 255, 255, .5);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .08);
+    padding: 20px;
+
+    gap: 10%;  /* espaçamento entre as colunas */
 }
 
 
@@ -114,10 +122,18 @@ body{
     
 }
 
-#profileIcon {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    border: 2px solid black;
-    margin-top: 10px;
+.profile-wrapper {
+    height: 100%;             /* ocupa 100% da altura da div pai */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#profileIcon {
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.18);
+    object-fit: cover;
+}
+
