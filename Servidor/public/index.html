@@ -3,7 +3,7 @@
 <!DOCTYPE html>
     <head>
         <!--* Titulo Significativo-->
-        <title>Home</title>
+        <title> Victor M. Ayres Index </title>
         <meta charset="UTF-8">
 
         <link href="css/style.css" rel="stylesheet">
@@ -12,27 +12,32 @@
     <body>
 
         <!--* MENU - Link para outras paginas-->
-        <div id="menu_bar">
-            <a href="index.html"> Home </a> | 
-            <a href="projetos.html"> Projetos </a> |
-            <a href="curriculo.html"> Curriculo </a> |
+        <div class="centralizado" id="menu_bar">
+            <div> <a href="index.html"> Home </a> </div>
+            <div> <a href="projetos.html"> Projetos </a> </div>
+            <div> <a href="curriculo.html"> Curriculo </a>  </div>
         </div>
 
-        <div id="content-box">   
-            <!--* Titulo + introdução-->
-            <img src="/assets/Image/profileIcon.jpeg" alt="imagem de perfil" id="profileIcon">
-            <h1> Victor M. O. de Mello Ayres </h1>
-            <p>Meu nome é Victor Mello Ayres, sou estudante de Engenharia de Robôs no Centro Universitario FEI.</p>
+        <div id="intro">
+            <!-- A camadas de sprites para formar o paralax-->
+            <div class="paralax-effect" id="layer1"></div>
+            <div class="paralax-effect" id="layer2"></div>
+            <div class="paralax-effect" id="layer3"></div>
+            <div class="paralax-effect" id="layer4"></div>
+            <div class="paralax-effect" id="layer5"></div>
+            
+            <!-- Content box -->
+            <div class="centralizado" id="intro-content">
+                <div><img src="/assets/Image/profileIcon.jpeg" alt="imagem de perfil" id="profileIcon"></div>
+                <div>
+                    <h1> Victor M. O. de Mello Ayres </h1>
+                    <p>Meu nome é Victor Mello Ayres, sou estudante de Engenharia de Robôs no Centro Universitario FEI.</p>
+                </div>
+            </div>
 
-            <!--* Listar nao ordenada-->
-            <h2>Lista de Contatos</h2>
-            <ul>
-                <li>Email: victoroliveiraayres@gmail.com</li>
-                <li>Telefone: +55 11 98765-4321</li>
-                <li>GitHub: <a href="https://github.com/vmayres"> /vmayres </a> </li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/victor-mello-ayres-1570ab295/"> Victor Mello Ayres </a> </li>
-            </ul>
+        </div>
 
+        <div id="main-content-box">
             <!--* Imagem-->
             <h2> Minhas Formação </h2>
             <P>Proficiente em Inglês - C2 </P>
@@ -102,9 +107,27 @@
             </iframe>
             <br>
         </div>
+
+        <div class="centralizado" id="contatos-box">
+            <div> 
+                <!--* Listar nao ordenada-->
+                <h2>Lista de Contatos</h2> 
+                <ul>
+                    <li>Email: victoroliveiraayres@gmail.com</li>
+                    <li>Telefone: +55 11 98765-4321</li>
+                    <li>GitHub: <a href="https://github.com/vmayres"> /vmayres </a> </li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/victor-mello-ayres-1570ab295/"> Victor Mello Ayres </a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="bottom-menu-box">
+
+        </div>
         
         <!--* Easter Egg-->
         <a href="easteregg.html"> :3 </a>
 
+        <script src="js/paralaxScript.js" type="text/javascript"></script>
     </body>
 </html>
