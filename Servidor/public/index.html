@@ -6,7 +6,10 @@
         <title> Victor M. Ayres Index </title>
         <meta charset="UTF-8">
 
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet"/>
+        <link href="css/paralax_effect.css" rel="stylesheet"/>
+        <link href="css/contacts_style.css" rel="stylesheet"/>
+        <link href="css/footer_style.css" rel="stylesheet"/>
     </head>
 
     <body>
@@ -112,6 +115,14 @@
         </div>
 
         <div class="centralizado" id="contatos-box">
+            <div class="coluna">
+                <h2> Entre em contato</h2>
+                <input type="text" name="nome" placeholder="Seu nome" class="contact-input" required> <br>
+                <input type="email" name="email" placeholder="seuemail@mail.com" class="contact-input" required> <br>
+                <textarea name="mensagem" placeholder="Escreva aqui sua mensagem!" class="contact-mensage" required></textarea> <br>
+                <button onclick="enviar()">Enviar</button>
+
+            </div>
             <div> 
                 <!--* Listar nao ordenada-->
                 <h2>Lista de Contatos</h2> 
@@ -124,12 +135,12 @@
             </div>
         </div>
 
-        <div id="bottom-menu-box">
-
+        <div class="centralizado" id="footer-box">
+            <!--* Easter Egg-->
+            <a href="easteregg.html"> :3 </a>
         </div>
         
-        <!--* Easter Egg-->
-        <a href="easteregg.html"> :3 </a>
+        
 
         <script src="js/paralaxScript.js" type="text/javascript"></script>
     </body>

@@ -1,0 +1,55 @@
+#contatos-box{
+    padding: 50px;
+    gap: 100px;
+}
+
+#contatos-box h2, #contatos-box ul, #contatos-box li {
+    color: whitesmoke;
+    margin-bottom: 15px;
+}
+
+
+.contact-input{
+    width: 400px;
+    height: 40px;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    color: dimgrey;
+}
+
+.contact-input:focus{
+    border: 2px solid orange
+}
+
+.contact-mensage {
+    width: 400px;
+    height: 150px;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    color: dimgray;
+}
+
+.contact-mensage:focus{
+    border: 2px solid orange;
+}
+
+#contatos-box button{
+    width: 120px;
+    height: 40px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contatos-box button:hover {
+    background: linear-gradient(to right, orange, pink);
+    outline: none;
+}

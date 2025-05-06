@@ -55,38 +55,7 @@ body{
 }
 
 
-/* Camada base para todos os layers */
-.paralax-effect {
-    position: absolute;
 
-    width: 100%;
-    height: 100%;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    will-change: transform;
-    pointer-events: none; /* impede clique nas camadas */
-}
-
-/* Camadas específicas */
-#layer1 {
-    background-image: url('../assets/paralax/2.png');
-    z-index: 2;
-}
-#layer2 {
-    background-image: url('../assets/paralax/3.png');
-    z-index: 3;
-}
-#layer3 {
-    background-image: url('../assets/paralax/4.png');
-    z-index: 4;
-}
-#layer4 {
-    background-image: url('../assets/paralax/5.png');
-    z-index: 5;
-}
 
 #intro-content{
     display: flex;
@@ -137,3 +106,6 @@ body{
     object-fit: cover;
 }
 
+#contatos-box{
+    background-color: #291f2f;
+}
