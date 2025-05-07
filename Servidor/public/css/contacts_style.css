@@ -1,6 +1,8 @@
 #contatos-box{
     padding: 50px;
     gap: 100px;
+
+    background-color: #291f2f;
 }
 
 #contatos-box h2, #contatos-box ul, #contatos-box li {

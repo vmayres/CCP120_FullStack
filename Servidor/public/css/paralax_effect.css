@@ -1,3 +1,20 @@
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    height: 100vh;
+    width: 100%;
+
+    background-image: url('../assets/paralax/1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative; 
+    overflow: hidden;    
+}
+
 /* Camada base para todos os layers */
 .paralax-effect {
     position: absolute;
@@ -29,4 +46,47 @@
 #layer4 {
     background-image: url('../assets/paralax/5.png');
     z-index: 5;
+    transform: translateY(5px);
+}
+
+#intro-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 50%;
+    z-index: 6;
+
+    border-radius: 25px;
+
+    background-color: rgba(208, 144, 216, 0.315);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-left: 1px solid rgba(255, 255, 255, .5);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .08);
+    padding: 20px;
+
+    gap: 10%;  /* espaçamento entre as colunas */
+}
+
+.profile-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-wrapper {
+    width: 60%;                  
+    color: white;
+    text-align: left;
+}
+
+#profileIcon {
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.18);
+    object-fit: cover;
 }

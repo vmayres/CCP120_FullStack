@@ -1,0 +1,42 @@
+#aboutme {
+    gap: 10%;
+    padding: 50px;
+}
+
+#aboutme h2,
+#aboutme p,
+#aboutme div,
+#aboutme ul,
+#aboutme li {
+    color: whitesmoke;
+    margin-bottom: 15px;
+}
+
+
+#foto-perfil img {
+    width: 250px;
+    border-radius: 15px;
+}
+
+#texto-sobre {
+    max-width: 700px;
+}
+
+/* Tabela visual 2xN */
+#tabela-aboutme {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.linha {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.celula {
+    flex: 1;
+}

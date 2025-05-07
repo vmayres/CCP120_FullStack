@@ -1,0 +1,232 @@
+/* ------------------------------- */
+/* Seção principal do portfólio   */
+/* ------------------------------- */
+
+#project-portfolio {
+    background: linear-gradient(155deg, #E4D1D1 20%, rgb(247, 168, 236));
+    padding: 55px 0;
+}
+
+/* Container central */
+.section-container {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Título principal */
+.section-tittle {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+.project-category {
+    margin-bottom: 60px;
+}
+
+.categort-tittle {
+    font-size: 1.8rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* ------------------------------- */
+/* Tipos de Cartoes                */
+/* ------------------------------- */
+
+/* Estilo de mini cards */
+.project-card-small {
+    width: 126px;
+    height: 174px;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+    background-color: #ddd;
+}
+
+.project-card-small:hover {
+    transform: scale(1.05);
+}
+
+.project-card-large {
+    width: 560px;
+    height: 315px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-color: #ccc;
+    transition: transform 0.3s;
+}
+
+.project-card-large:hover {
+    transform: scale(1.08);
+}
+
+/* Cartão com texto */
+.project-text-card {
+    width: 560px;
+    height: 315px;
+    background-color: #ffffffcc;
+    color: #222;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-text-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.project-text-card p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Cartao de vidio */
+.project-video {
+    width: 560px;
+    height: 315px;
+    border: none;
+}
+
+/* ------------------------------- */
+/* Grids de showcase               */
+/* ------------------------------- */
+
+/*TODO: juntar o embed grid e card pair em uma unica classe, fazer com que eu monte na ame os pares*/
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card-pair {
+    display: flex;
+    gap: 30px 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+/* Grid 2x2 */
+.embedded-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.embedded-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ------------------------------- */
+/* Projetos Embarcados             */
+/* ------------------------------- */
+
+.project-intro-wide {
+    max-width: 1160px;
+    margin: 0 auto 40px auto;
+    padding: 30px;
+    background-color: #ffffffcc;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.project-intro-wide h4 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.project-intro-wide p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ------------------------------- */
+/* Publicações Acadêmicas          */
+/* ------------------------------- */
+
+.project-publications {
+    background-color: #ffffffcc;
+    color: #333;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.project-publications h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.publication-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.publication-list li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.publication-list a {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+/* ------------------------------- */
+/* Backgrounds específicos        */
+/* ------------------------------- */
+
+#copiando-modelo {
+    background-image: url('../assets/Image/copiandomodeloicon.png');
+}
+
+#adivinhacao {
+    background-image: url('../assets/Image/guessnumber.png');
+}
+
+#desenho-canvas {
+    background-image: url('../assets/Image/desenhando.png');
+}
+
+#animacao-canvas {
+    background-image: url('../assets/Image/animandocanvas.png');
+}
+
+#web-gamedev {
+    background-image: url('../assets/Image/webgame.png');
+}
+
+#elixer-of-life {
+    background-image: url('../assets/Image/elixer.png');
+}
+
+#entregabo {
+    background-image: url('../assets/Image/entregabo.png');
+}
+
+#hovercraft {
+    background-image: url('../assets/Image/hovercraft.png');
+}
