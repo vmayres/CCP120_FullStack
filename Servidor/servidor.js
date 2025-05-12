@@ -21,7 +21,6 @@ app.get("/", function(req, resp){
   resp.redirect("index.html");
 });
 
-
 //! Gei in thouch
 app.post('/enviar-contato', function(req, res) {
     const { nome, email, mensagem } = req.body;
@@ -30,7 +29,7 @@ app.post('/enviar-contato', function(req, res) {
         service: 'gmail',
         auth: {
             user: 'victoroliveiraayres@gmail.com',
-            pass: 'cvmx msrf hbac wlrz' // não use sua senha pessoal
+            pass: 'cvmx msrf hbac wlrz' // Recomendado usar variável de ambiente aqui no futuro
         }
     });
 
@@ -57,9 +56,7 @@ app.post('/enviar-contato', function(req, res) {
     });
 });
 
-
 //! Comandos do blog
-// Rota para exibir todos os posts no blog
 app.get("/blog", function (req, resp){
     client.db("exemplo_bd").collection("posts_blog").find({}).toArray(function(err, posts) {
         if (err) {
@@ -70,7 +67,6 @@ app.get("/blog", function (req, resp){
     });
 });
 
-// Rota para cadastrar um novo post via GET
 app.get("/cadastrar_post", function(req, resp){
     let titulo = req.query.titulo;
     let resumo = req.query.resumo;
@@ -98,8 +94,9 @@ app.get("/cadastrar_post", function(req, resp){
     );
 });
 
-
-// Inicializa o Servidor na porta 80
+// Porta compatível com Render e local (porta 80)
+const PORT = process.env.PORT || 80;
 const server = http.createServer(app);
-server.listen(80);
-console.log("Servidor Iniciado".rainbow);
+server.listen(PORT, () => {
+  console.log(`Servidor iniciado na porta ${PORT}`.rainbow);
+});

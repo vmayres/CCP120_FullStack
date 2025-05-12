@@ -6,21 +6,31 @@
     "mongodb": "4.12",
     "nodemailer": "^7.0.3"
   },
+
   "name": "servidor",
+
   "version": "1.0.0",
+
   "description": "primeiro servidor criado em laboratorio",
+
   "main": "servidor.js",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "start": "node servidor.js"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vmayres/CCP120_FullStack.git"
   },
+
   "author": "victor ayres",
+
   "license": "ISC",
+
   "bugs": {
     "url": "https://github.com/vmayres/CCP120_FullStack/issues"
   },
+  
   "homepage": "https://github.com/vmayres/CCP120_FullStack#readme"
 }
