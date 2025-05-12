@@ -215,6 +215,10 @@
     background-image: url('../assets/Image/animandocanvas.png');
 }
 
+#blog{
+    background-image: url('../assets/Image/paginaBlog.png');
+}
+
 #web-gamedev {
     background-image: url('../assets/Image/webgame.png');
 }

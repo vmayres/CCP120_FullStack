@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #291f2f;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+main.centralizado {
+    width: 100%;
+    max-width: 800px;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título principal */
+main.centralizado h1 {
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+/* Botão de criar post */
+main.centralizado > button {
+    width: 160px;
+    height: 40px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+main.centralizado > button:hover {
+    background: linear-gradient(to right, orange, pink);
+}
+
+/* Formulário de criação */
+#form-post form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+/* Campos de input e textarea */
+#form-post input,
+#form-post textarea {
+    width: 400px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: dimgray;
+}
+
+#form-post input:focus,
+#form-post textarea:focus {
+    border: 2px solid orange;
+}
+
+/* Botão de envio do formulário */
+#form-post button {
+    width: 120px;
+    height: 40px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#form-post button:hover {
+    background: linear-gradient(to right, orange, pink);
+}
+
+/* Seção de posts */
+#posts {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Estilo individual de post */
+.post {
+    background-color: #3b2d45;
+    border-radius: 15px;
+    padding: 20px;
+    color: whitesmoke;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.post h2 {
+    margin-bottom: 5px;
+}
+
+.post h4 {
+    margin-bottom: 15px;
+    font-weight: normal;
+    color: lightgray;
+}
+
+.botao-voltar {
+    width: 160px;
+    height: 40px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.botao-voltar:hover {
+    background: linear-gradient(to right, orange, pink);
+}

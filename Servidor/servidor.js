@@ -2,59 +2,104 @@ require("colors");
 const http = require("http");
 const express = require("express");
 const mongodb = require("mongodb");
-
+const nodemailer = require('nodemailer');
 
 const MongoClient = mongodb.MongoClient;
 const uri = 'mongodb+srv://victorayres:6DK5s5RjJoUppgXJ@victor.zji0nys.mongodb.net/?retryWrites=true&w=majority&appName=Victor';
 const client = new MongoClient(uri, { useNewUrlParser: true });
 
-var dbo = client.db("exemplo_bd");
-var usuarios = dbo.collection("usuarios");
+const app = express();
 
+// Define a pasta pública e configura o EJS
+app.use(express.static("./public"));
+app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
+app.set("views", "./views");
 
-
-const app = express()
-app.use(express.static("./public"))
-const server = http.createServer(app)
+// Redireciona o Localhost sempre para o index.html
 app.get("/", function(req, resp){
-  resp.redirect('index.html')
-})
+  resp.redirect("index.html");
+});
 
 
+//! Gei in thouch
+app.post('/enviar-contato', function(req, res) {
+    const { nome, email, mensagem } = req.body;
 
-app.post("/cadastrar_usuario", function(req, resp) {
-    var data = { db_nome: req.body.nome, db_login: req.body.login, db_senha: req.body.senha };
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'victoroliveiraayres@gmail.com',
+            pass: 'cvmx msrf hbac wlrz' // não use sua senha pessoal
+        }
+    });
 
-    usuarios.insertOne(data, function (err) {
+    const mailOptions = {
+        from: email,
+        to: 'victoroliveiraayres@gmail.com',
+        subject: `Contato do site - ${nome}`,
+        text: `Nome: ${nome}\nEmail: ${email}\n\nMensagem:\n${mensagem}`
+    };
+
+    transporter.sendMail(mailOptions, function(error, info) {
+        if (error) {
+            console.log(error);
+            res.render('resposta.ejs', {
+                resposta: 'Erro',
+                mensagem: 'Não foi possível enviar sua mensagem. Tente novamente.'
+            });
+        } else {
+            res.render('resposta.ejs', {
+                resposta: 'Mensagem enviada!',
+                mensagem: 'Obrigado por entrar em contato!'
+            });
+        }
+    });
+});
+
+
+//! Comandos do blog
+// Rota para exibir todos os posts no blog
+app.get("/blog", function (req, resp){
+    client.db("exemplo_bd").collection("posts_blog").find({}).toArray(function(err, posts) {
         if (err) {
-        resp.render('resposta_usuario', {resposta: "Erro ao cadastrar usuário!"})
-        }else {
-        resp.render('resposta_usuario', {resposta: "Usuário cadastrado com sucesso!"})        
-        };
+            resp.render("resposta_blog.ejs", { resposta: "Falha!", mensagem: "Erro ao buscar posts!" });
+        } else {
+            resp.render("blog.ejs", { posts });
+        }
     });
-   
 });
 
-app.post("/logar_usuario", function(req, resp) {
-    var data = {db_login: req.body.login, db_senha: req.body.senha };
+// Rota para cadastrar um novo post via GET
+app.get("/cadastrar_post", function(req, resp){
+    let titulo = req.query.titulo;
+    let resumo = req.query.resumo;
+    let conteudo = req.query.conteudo;
 
-    usuarios.find(data).toArray(function(err, items) {
-      console.log(items);
-      if (items.length == 0) {
-        resp.render('resposta_usuario', {resposta: "Usuário/senha não encontrado!"})
-      }else if (err) {
-        resp.render('resposta_usuario', {resposta: "Erro ao logar usuário!"})
-      }else {
-        resp.render('resposta_usuario', {resposta: "Usuário logado com sucesso!"})        
-      };
-    });
-
+    client.db("exemplo_bd").collection("posts_blog").insertOne(
+        { 
+            db_titulo: titulo,
+            db_resumo: resumo,
+            db_conteudo: conteudo
+        }, 
+        function (err) {
+            if (err) {
+                resp.render("resposta_blog.ejs", {
+                    resposta: "Falha!",
+                    mensagem: "Erro ao cadastrar post!"
+                });
+            } else {
+                resp.render("resposta_blog.ejs", {
+                    resposta: "Sucesso!",
+                    mensagem: "Post cadastrado com sucesso!"
+                });       
+            }
+        }
+    );
 });
 
 
-server.listen(80)
+// Inicializa o Servidor na porta 80
+const server = http.createServer(app);
+server.listen(80);
 console.log("Servidor Iniciado".rainbow);
-
-
-
-

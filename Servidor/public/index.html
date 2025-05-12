@@ -150,7 +150,7 @@
                         <a href="adivinhacao.html" class="project-card-small" id="adivinhacao" title="Adivinhação"></a>
                         <a href="canvas.html" class="project-card-small" id="desenho-canvas" title="Desenho Canvas"></a>
                         <a href="animacao.html" class="project-card-small" id="animacao-canvas" title="Animação Canvas"></a>
-                        <a href="" class="project-card-small" id="servidor" title="Simulado de prova"></a>
+                        <a href="/blog" class="project-card-small" id="blog" title="Simulado de prova"></a>
                         <a href="" class="project-card-small" id="banco-de-dados" title="Simulado de prova"></a>
                     </div>
                 </div>
@@ -240,23 +240,27 @@
         <div class="centralizado" id="contatos-box">
             <div class="coluna">
                 <h2> Entre em contato</h2>
-                <input type="text" name="nome" placeholder="Seu nome" class="contact-input" required> <br>
-                <input type="email" name="email" placeholder="seuemail@mail.com" class="contact-input" required> <br>
-                <textarea name="mensagem" placeholder="Escreva aqui sua mensagem!" class="contact-mensage" required></textarea> <br>
-                <button onclick="enviar()">Enviar</button>
+
+                <form action="/enviar-contato" method="POST">
+                    <input type="text" name="nome" placeholder="Seu nome" class="contact-input" required> <br>
+                    <input type="email" name="email" placeholder="seuemail@mail.com" class="contact-input" required> <br>
+                    <textarea name="mensagem" placeholder="Escreva aqui sua mensagem!" class="contact-mensage" required></textarea> <br>
+                    <button type="submit">Enviar</button>
+                </form>
 
             </div>
-            <div> 
-                <!--* Listar nao ordenada-->
+
+            <div>
                 <h2>Lista de Contatos</h2> 
                 <ul>
                     <li>Email: victoroliveiraayres@gmail.com</li>
                     <li>Telefone: +55 11 98765-4321</li>
-                    <li>GitHub: <a href="https://github.com/vmayres"> /vmayres </a> </li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/victor-mello-ayres-1570ab295/"> Victor Mello Ayres </a> </li>
+                    <li>GitHub: <a href="https://github.com/vmayres">/vmayres</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/victor-mello-ayres-1570ab295/">Victor Mello Ayres</a></li>
                 </ul>
             </div>
         </div>
+
 
         <!-- Rodapé da pagina web-->
         <div class="centralizado" id="footer-box">
