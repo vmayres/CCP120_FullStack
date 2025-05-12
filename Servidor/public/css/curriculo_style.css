@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.centralizado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu_bar{
+    display: flex;
+    justify-content: space-around;
+
+    background-color: rgba(46, 45, 47, 0.7);
+    backdrop-filter: blur(35px);
+    padding: 15px 450px;
+    text-align: left;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#menu_bar a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+#menu_bar a:hover {
+    background: linear-gradient(to right, orange, pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Garantia para navegadores modernos */
+}
+
+
+
+
+
+
+
+
+
+/* Cabeçalho do currículo */
+#header_curriculo {
+    margin-top: 70px; /* compensação do menu fixo */
+    background-color: #111;
+    color: white;
+    padding: 30px 60px 40px;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 30px solid whitesmoke;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+}
+
+/* Corpo do currículo */
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 60px;
+    gap: 40px;
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 300px;
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #111;
+    padding-bottom: 0.3rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.content {
+    flex: 2;
+}
+
+.content h2 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    border-bottom: 2px solid #111;
+    padding-bottom: 0.3rem;
+}
+
+.content h3 {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: #444;
+}
+
+.content p {
+    line-height: 1.6;
+    margin-top: 0.3rem;
+}

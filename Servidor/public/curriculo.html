@@ -3,35 +3,60 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Curriculo</title>
 
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/curriculo_style.css" rel="stylesheet"/>
     </head>
 
     <body>
 
-        <!--* MENU - Link para outras paginas-->
-        <div id="menu_bar">
-            <a href="index.html"> Home </a> | 
-            <a href="projetos.html"> Projetos </a> |
-            <a href="curriculo.html"> Curriculo </a> |
-        </div>
-
-        <div id="content">
-            <h1>Work in Progress</h1>
-            <p>
-                This page is currently under construction. We are working hard to bring you the best content possible. 
-                Please check back soon for updates. In the meantime, feel free to explore our other pages and learn more 
-                about our projects and initiatives. Your patience and understanding are greatly appreciated as we continue 
-                to improve and expand our website. Thank you for visiting, and we look forward to sharing more with you soon!
-            </p>
-            <p>
-                If you have any questions or suggestions, don't hesitate to reach out to us. We value your feedback and 
-                are always looking for ways to enhance your experience. Stay tuned for exciting updates and new features 
-                that we are planning to roll out in the near future. Thank you for your support!
-            </p>
+        <!-- Menu de navegaçao -->
+        <div class="centralizado" id="menu_bar">
+            <div> <a href="index.html#intro"> Home </a> </div>
+            <div> <a href="index.html#aboutme"> Sobre Mim </a> </div>
+            <div> <a href="index.html#project-portfolio"> Projetos </a> </div>
+            <div> <a href="index.html#contatos-box"> Contato </a> </div>
+            <div> <a href="curriculo.html"> Curriculo </a>  </div>
         </div>
         
+         <!-- Cabeçalho com foto e nome -->
+        <header id="header_curriculo">
+            <div class="header-content">
+                <img src="assets/Image/profileIcon.jpeg" alt="Foto de perfil" class="profile-pic"/>
+                <div>
+                    <h1>Victor Ayres</h1>
+                    <p>Engenheiro de Robôs | Programador</p>
+                </div>
+            </div>
+            <div class="triangle-down"></div>
+        </header>
+
+        <!-- Conteúdo principal -->
+        <main class="container">
+            <!-- Lado esquerdo -->
+            <aside class="sidebar">
+                <h2>Contato</h2>
+                <ul>
+                    <li>Email: exemplo@email.com</li>
+                    <li>Telefone: (11) 99999-9999</li>
+                    <li>LinkedIn: /victorayres</li>
+                </ul>
+
+                <h2>Educação</h2>
+                <p>Centro Universitário FEI<br>Engenharia de Robôs<br>2021 – 2025</p>
+            </aside>
+
+            <!-- Lado direito -->
+            <section class="content">
+                <h2>Resumo</h2>
+                <p>Desenvolvedor apaixonado por robótica, com experiência em sistemas embarcados, ROS2 e inteligência artificial.</p>
+
+                <h2>Experiência</h2>
+                <h3>RoboFEI@Work – Capitão de Programação</h3>
+                <p>Responsável pelo controle e navegação de robôs autônomos em ambientes industriais simulados e reais.</p>
+            </section>
+        </main>
+
+
     </body>
 </html>
