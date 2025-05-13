@@ -203,6 +203,10 @@
     background-image: url('../assets/Image/copiandomodeloicon.png');
 }
 
+#simulado-prova {
+    background-image: url('');
+}
+
 #adivinhacao {
     background-image: url('../assets/Image/guessnumber.png');
 }
@@ -219,6 +223,12 @@
     background-image: url('../assets/Image/paginaBlog.png');
 }
 
+#carros{
+    background-image: url('../assets/Image/carros.png');
+}
+
+/*----------------------------*/
+
 #web-gamedev {
     background-image: url('../assets/Image/webgame.png');
 }
@@ -226,6 +236,8 @@
 #elixer-of-life {
     background-image: url('../assets/Image/elixer.png');
 }
+
+/*----------------------------*/
 
 #entregabo {
     background-image: url('../assets/Image/entregabo.png');
