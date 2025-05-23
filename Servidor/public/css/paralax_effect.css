@@ -90,3 +90,7 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.18);
     object-fit: cover;
 }
+
+#epigrafe{
+    font-size: 1.1em;
+}
