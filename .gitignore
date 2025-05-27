@@ -1,2 +1,7 @@
 Servidor/node_modules/*
 Servidor/package-lock.json
+
+Servidor_carros/node_modules*
+Servidor_carros/package-lock.json
+
+blog_server*

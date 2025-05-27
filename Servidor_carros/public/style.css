@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d1e4f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.centralizado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu_bar{
+    display: flex;
+    justify-content: space-around;
+
+    background-color: rgba(46, 45, 47, 0.7);
+    backdrop-filter: blur(35px);
+    padding: 15px 450px;
+    text-align: left;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#menu_bar a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+#menu_bar a:hover {
+    background: linear-gradient(to right, orange, pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Garantia para navegadores modernos */
+}
+
+.cadastro, .form, #largura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px 40px;
+    max-width: 400px;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"], input[type="number"], input[type="password"] {
+    margin: 5px 0 15px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.button, input[type="submit"] {
+    background: linear-gradient(90deg, #4e9af1, #6ed0f6);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.button:hover, input[type="submit"]:hover {
+    background: linear-gradient(90deg, #6ed0f6, #4e9af1);
+}
+
+#menu_bar {
+    margin-bottom: 80px;
+}

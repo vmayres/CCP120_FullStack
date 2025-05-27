@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="./style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+
+        <!-- Menu de navegaçao-->
+        <div class="centralizado" id="menu_bar">
+            <div> <a href="/carros"> Catalago </a> </div>
+            <div> <a href="car_manager.html"> Manager </a> </div>
+            <div> <a href="login_user.html"> Log In </a> </div>
+            <div> <a href="singin_user.html"> Cadastrar-se </a> </div>
+        </div>
+
+        <h1>Carros disponíveis em estoque</h1>
+        <div id="largura">
+            <% carros.forEach(carro => { %>
+                <div class="form" id="posts">
+                    <h2><%= carro.db_marca %></h2>
+                    <p><%= carro.db_modelo %></p>
+                    <p><%= carro.db_ano %></p>
+                    <p>
+                        Estoque: 
+                        <% if (carro.db_qtde > 0) { %>
+                            <%= carro.db_qtde %>
+                            <form action="/vender-carro" method="post" style="margin-top:10px;">
+                                <input type="hidden" name="modelo" value="<%= carro.db_modelo %>">
+                                <input type="hidden" name="marca" value="<%= carro.db_marca %>">
+                                <input type="hidden" name="ano" value="<%= carro.db_ano %>">
+                                <input type="submit" value="Vender" class="button">
+                            </form>
+                        <% } else { %>
+                            Esgotado!
+                        <% } %>
+                    </p>
+                </div>
+            <% }) %>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="./style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+
+        <!-- Menu de navegaçao-->
+        <div class="centralizado" id="menu_bar">
+            <div> <a href="/carros"> Catalago </a> </div>
+            <div> <a href="car_manager.html"> Manager </a> </div>
+            <div> <a href="login_user.html"> Log In </a> </div>
+            <div> <a href="singin_user.html"> Cadastrar-se </a> </div>
+        </div>
+
+        <h1>Gerência dos Carros</h1>
+        
+        <!-- CRUD: CREATE -->
+        <div class="cadastro">
+            <h3>Cadastrar Carro</h3>
+            <!-- Cria um novo carro no banco de dados -->
+            <form method="post" action="/adicionar-carro">
+                <p>Marca: <input type="text" name="marca"></p>
+                <p>Modelo: <input type="text" name="modelo"></p>
+                <p>Ano: <input type="number" name="ano"></p>
+                <p>Quantidade Disponível: <input type="number" name="quantidade"></p>
+                <input type="submit" value="Cadastrar" class="button">
+            </form>
+        </div>
+
+        <!-- CRUD: UPDATE -->
+        <div class="cadastro">
+            <h3>Atualizar Carro</h3>
+            <!-- Atualiza os dados de um carro existente -->
+            <form method="post" action="/atualizar-carro">
+                <p>Modelo: <input type="text" name="modelo"></p>
+                <p>Marca: <input type="text" name="marca"></p>
+                <p>Ano: <input type="number" name="ano"></p>
+                <p>Nova quantidade: <input type="number" name="quantidade"></p>
+                <input type="submit" value="Atualizar" class="button">
+            </form>
+        </div>
+
+        <!-- CRUD: DELETE -->
+        <div class="cadastro">
+            <h3>Remover Carro</h3>
+            <!-- Remove um carro do banco de dados -->
+            <form method="post" action="/remover-carro">
+                <p>Modelo: <input type="text" name="modelo"></p>
+                <p>Marca: <input type="text" name="marca"></p>
+                <p>Ano: <input type="number" name="ano"></p>
+                <input type="submit" value="Remover" class="button">
+            </form>
+        </div>
+        
+        <!-- CRUD: UPDATE (Vender = Atualizar quantidade) -->
+        <div class="cadastro">
+            <h3>Vender Carro</h3>
+            <!-- Decrementa a quantidade de um carro (venda) -->
+            <form method="post" action="/vender-carro">
+                <p>Modelo: <input type="text" name="modelo"></p>
+                <p>Marca: <input type="text" name="marca"></p>
+                <p>Ano: <input type="number" name="ano"></p>
+                <input type="submit" value="Vender" class="button">
+            </form>
+        </div>
+        
+
+    </body>
+</html>

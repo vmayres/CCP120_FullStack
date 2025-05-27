@@ -1,0 +1,8 @@
+1. cria uma pasta
+2. entar dentro da pasta no terminal
+3. npm init -y
+4. npm install colors, express, monogodb@4.12, ejs
+5. mkdir public
+6. mkdir views
+7. cria o server.js
+8.git ignore
