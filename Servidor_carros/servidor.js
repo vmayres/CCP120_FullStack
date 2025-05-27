@@ -137,19 +137,32 @@ app.post("/vender-carro", function(req, resp) {
       resp.render('resposta.ejs', {resposta: "Erro ao acessar o banco de dados!"});
     } else if (!carro) {
       resp.render('resposta.ejs', {resposta: "Carro não encontrado!"});
-    } else if (parseInt(carro.quantidade) <= 0) {
-      resp.render('resposta.ejs', {resposta: "Esgotado! Não é possível vender."});
     } else {
-      client.db("exemplo_bd").collection("carros").updateOne(filtro, { $inc: { quantidade: -1 } }, function(err) {
-        if (err) {
-          resp.render('resposta.ejs', {resposta: "Erro ao vender carro!"});
-        } else {
-          resp.render('resposta.ejs', {resposta: "Carro vendido com sucesso!"});
-        }
-      });
+      let quantidadeAtual = parseInt(carro.quantidade);
+
+      if (isNaN(quantidadeAtual)) {
+        resp.render('resposta.ejs', {resposta: "Quantidade inválida no banco de dados!"});
+      } else if (quantidadeAtual <= 0) {
+        resp.render('resposta.ejs', {resposta: "Esgotado! Não é possível vender."});
+      } else {
+        let novaQuantidade = (quantidadeAtual - 1).toString();
+
+        client.db("exemplo_bd").collection("carros").updateOne(
+          filtro,
+          { $set: { quantidade: novaQuantidade } },
+          function(err) {
+            if (err) {
+              resp.render('resposta.ejs', {resposta: "Erro ao vender carro!"});
+            } else {
+              resp.render('resposta.ejs', {resposta: "Carro vendido com sucesso!"});
+            }
+          }
+        );
+      }
     }
   });
 });
+
 
 
 // CRUD: READ (Listar carros disponíveis)
